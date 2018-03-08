@@ -12,7 +12,7 @@ var data = [
   { title: "Spectra", location: { lat: 29.993899, lng: 31.160767 } },
   { title: "Marhaba", location: { lat: 29.995760, lng: 31.159295 } },
   { title: "myLocation", location: { lat: 29.993827, lng: 31.159313 } }
-]
+];
 var map;
 var content;
 function LocationViewModel() {
@@ -21,7 +21,7 @@ function LocationViewModel() {
   var self = this;
   this.resturant = ko.observable("Resturants");
   this.list = ko.observableArray([]);
-  this.list.push(new locationModel({ title: "Resturants", location: null, marker: null }))
+  this.list.push(new locationModel({ title: "Resturants", location: null, marker: null }));
   data.forEach(function (index) {
     var marker = new google.maps.Marker({
       position: index.location,
@@ -58,7 +58,7 @@ function LocationViewModel() {
             index.content ="<p>Failed To load The Data</p>";
             self.list.push(new locationModel(index));
 
-          });;
+          });
   
  
   });
@@ -77,7 +77,7 @@ function LocationViewModel() {
       self.resturant(location.title);
  
     }
-  }
+  };
 }
 
 function showall(list) {
